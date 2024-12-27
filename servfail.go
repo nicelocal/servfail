@@ -27,6 +27,7 @@ func (e *ServFail) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.Ms
 	msg.SetReply(r)
 	msg.Authoritative = true
 	msg.RecursionAvailable = true
+	msg.Rcode = dns.RcodeServerFailure
 
 	w.WriteMsg(msg)
 
