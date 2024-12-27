@@ -31,7 +31,7 @@ func (e *ServFail) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.Ms
 
 	w.WriteMsg(msg)
 
-	return dns.RcodeServerFailure, nil
+	return dns.RcodeSuccess, nil
 }
 
 // Name implements the Handler interface.
